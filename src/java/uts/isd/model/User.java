@@ -11,22 +11,22 @@ import javax.servlet.http.HttpSession;
  * @author peter
  */
 public class User {
-    private String name;
     private String email;
+    private String name;
     private String password;
     private String gender;
-    private String dob;
     private String favcol;
+    private String dob;
 
     
     //insert a constructor that intializes thefields
-    public User(String name, String email, String password, String gender, String dob, String favcol) {
-        this.name = name;
+    public User(String email, String name, String password, String gender, String favcol, String dob) {
         this.email = email;
+        this.name = name;
         this.password = password;
         this.gender = gender;
-        this.dob = dob;
         this.favcol = favcol;
+        this.dob = dob;
 
     }
     
@@ -37,18 +37,11 @@ public class User {
         String gender = request.getParameter("gender");
         String dob = request.getParameter("dob");
         String favcol = request.getParameter("favcol");
-        user = new User(name,email,password,gender,dob,favcol);
+        user = new User(email, name ,password, gender, favcol, dob);
         session.setAttribute("user", user);
     }
     
     //insert getter and setter
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;
@@ -56,6 +49,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -74,16 +75,6 @@ public class User {
         this.gender = gender;
     }
 
-    
-    
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
     public String getFavcol() {
         return favcol;
     }
@@ -92,7 +83,13 @@ public class User {
         this.favcol = favcol;
     }
 
+    public String getDob() {
+        return dob;
+    }
 
-    
-    
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+       
 }
