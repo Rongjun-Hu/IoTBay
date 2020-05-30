@@ -20,9 +20,8 @@
          %>
          <table id="profile_table">
             <thead>
-                <th>Eamil</th>
+                <th>Email</th>
                 <th>Full Name</th>
-                
                 <th>Password</th>
                 <th>Gender</th>
                 <th>Date of Birth</th>
