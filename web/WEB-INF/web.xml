@@ -2,31 +2,31 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>ConnServlet</servlet-name>
-        <servlet-class>uts.isd.controller.ConnServlet</servlet-class>
+        <servlet-class>uts.isd.controller.userController.ConnServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>uts.isd.controller.RegisterServlet</servlet-class>
+        <servlet-class>uts.isd.controller.userController.RegisterServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Validator</servlet-name>
-        <servlet-class>uts.isd.controller.Validator</servlet-class>
+        <servlet-class>uts.isd.controller.userController.Validator</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UpdateServlet</servlet-name>
-        <servlet-class>uts.isd.controller.UpdateServlet</servlet-class>
+        <servlet-class>uts.isd.controller.userController.UpdateServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>EditServlet</servlet-name>
-        <servlet-class>uts.isd.controller.EditServlet</servlet-class>
+        <servlet-class>uts.isd.controller.userController.EditServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>uts.isd.controller.LoginServlet</servlet-class>
+        <servlet-class>uts.isd.controller.userController.LoginServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LogourController</servlet-name>
-        <servlet-class>uts.isd.controller.LogoutController</servlet-class>
+        <servlet-name>LogoutController</servlet-name>
+        <servlet-class>uts.isd.controller.userController.LogoutController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
@@ -53,8 +53,8 @@
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LogourController</servlet-name>
-        <url-pattern>/LogourController</url-pattern>
+        <servlet-name>LogoutController</servlet-name>
+        <url-pattern>/LogoutController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
