@@ -21,7 +21,7 @@
             String nameErr = (String) session.getAttribute("nameErr");
         %>
         
-        <h1 class="reg_h1">Sign Up<span class="message"> <%= (existErr != null ? existErr : ""%></span></h1>
+        <h1 class="reg_h1">Sign Up<span class="message"> <%= (existErr != null ? existErr : "")%></span></h1>
          <form class="form" action="RegisterServlet" method="post">
             <table>
                 <tr><td>Email:</td><td><input type="text" placeholder="<%=(emailErr != null ? emailErr : "Enter email")%>" name="email" required></td></tr>
