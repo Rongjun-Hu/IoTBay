@@ -22,19 +22,18 @@ public class UserDBManager {
     // Find user by email and password in the database - Read one row in the database table
     public User findUser(String email, String password) throws SQLException {
         //setup the select sql query string       
-        String fetch = "Select * FROM IOTUSER.USERS WHERE EMAIL =  " + email + " AND PASSWORD = " + password;
+        String fetch = "Select * FROM IOTUSER.USERS WHERE EMAIL = '" + email + "'";
         //execute this query using the statement field     
         ResultSet rs = st.executeQuery(fetch);
         //add the results to a ResultSet       
         while (rs.next()) {
-            String userEmail = rs.getString(1);
             String userPass = rs.getString(3);
-            if (userEmail.equals(email) && userPass.equals(password)) {
+            if (userPass.equals(password)) {
                 String userName = rs.getString(2);
                 String userGender = rs.getString(4);
                 String userFavcol = rs.getString(5);
                 String userDOB = rs.getString(6);
-                return new User(userEmail, userName, userPass, userGender, userFavcol, userDOB);
+                return new User(email, userName, password, userGender, userFavcol, userDOB);
             }
         }
         //search the ResultSet for a user using the parameters               
