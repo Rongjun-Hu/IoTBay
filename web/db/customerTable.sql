@@ -4,7 +4,7 @@
  * Created: 12/05/2020
  */
 
--- drop table customer;
+-- DROP TABLE USERS;
 
 CREATE TABLE USERS
 (
@@ -18,7 +18,7 @@ PRIMARY KEY(Email));
 
 INSERT INTO USERS (EMAIL, NAME, PASSWORD, GENDER, FAVCOL, DOB)
 VALUES
-('steve@uts.edu.au', 'Hong Kung', 'a12431868', 'male', 'purple', '1997-04-08');
+('steve@uts.edu.au', 'Hong Kung', 'a12431868', 'male', 'Red', '1997-04-08');
 
 select * from USERS;
 
