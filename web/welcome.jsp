@@ -32,7 +32,7 @@
             <p class="p">Your Favourite Color is: <%= favcol %></p>
             <div>
                 <a  class="button" href="index.jsp">Cancel</a>
-                <a class="button" href="main.jsp">Main</a>
+                <a class="button" href="main.jsp">Back to Main</a>
             </div>
         </div>
         <%
