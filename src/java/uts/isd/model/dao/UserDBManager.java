@@ -32,9 +32,9 @@ public class UserDBManager {
             if (userEmail.equals(email) && userPass.equals(password)) {
                 String userName = rs.getString(2);
                 String userGender = rs.getString(4);
-                String userFavcol = rs.getString(6);
-                String userDOB = rs.getString(5);
-                return new User(userEmail, userName, password, userGender, userFavcol, userDOB);
+                String userFavcol = rs.getString(5);
+                String userDOB = rs.getString(6);
+                return new User(userEmail, userName, userPass, userGender, userFavcol, userDOB);
             }
         }
         //search the ResultSet for a user using the parameters               
@@ -72,8 +72,8 @@ public class UserDBManager {
             String name = rs.getString(2);
             String password = rs.getString(3);
             String gender = rs.getString(4);
-            String favcol = rs.getString(6);
-            String dob = rs.getString(5);
+            String favcol = rs.getString(5);
+            String dob = rs.getString(6);
             temp.add(new User(email, name, password, gender, favcol, dob));
         }
          return temp;
