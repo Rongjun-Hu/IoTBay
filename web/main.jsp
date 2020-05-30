@@ -21,9 +21,9 @@
         <h1>User Dashboard</h1>
         <hr>
         <div class="main_btn">
-            <a class="button" href="EditServlet?email='<%=user.getEmail()%>'&password'<%=user.getPassword()%>'" >Account</a>
+            <a class="button" href="EditServlet?email='<%=user.getEmail()%>'&password='<%=user.getPassword()%>'" >Account</a>
             <!--<a class="button" href="edit.jsp"> Account</a>-->
-            <a class="button" href="LogoutController">Logout</a>
+            <a class="button" href="LogoutServlet">Logout</a>
         </div>
 
         <p style="text-align: right; color: yellow; "> <i>You are logged in as ${user.name} &lt; ${user.email} &gt;</i></p>
