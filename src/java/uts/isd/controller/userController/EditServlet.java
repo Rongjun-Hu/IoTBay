@@ -31,11 +31,12 @@ public class EditServlet extends HttpServlet {
         HttpSession session = request.getSession();   
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        String permission = request.getParameter("permission");
         UserDBManager manager = (UserDBManager) session.getAttribute("manager");
         
         User user = null;
         try {
-            user = manager.findUser(email, password);
+            user = manager.findUser(email, password, permission);
             if (user != null) {
                 session.setAttribute("user", user);
                 request.getRequestDispatcher("edit.jsp").include(request, response);

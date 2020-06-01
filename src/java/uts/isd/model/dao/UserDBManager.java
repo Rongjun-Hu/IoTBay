@@ -20,23 +20,23 @@ public class UserDBManager {
     }
 
     // Find user by email and password in the database - Read one row in the database table
-    public User findUser(String email, String password) throws SQLException {
-        //setup the select sql query string       
-        String fetch = "Select * FROM IOTUSER.USERS WHERE EMAIL = '" + email + "'";
-        //execute this query using the statement field     
+    public User findUser(String email, String password, String permission) throws SQLException {
+        
+        String fetch = "SELECT * FROM IOTUSER.USERS WHERE EMAIL = '" + email + "'";
+        
         ResultSet rs = st.executeQuery(fetch);
-        //add the results to a ResultSet       
+        
         while (rs.next()) {
-            String userPass = rs.getString(3);
-            if (userPass.equals(password)) {
-                String userName = rs.getString(2);
-                String userGender = rs.getString(4);
-                String userFavcol = rs.getString(5);
-                String userDOB = rs.getString(6);
-                return new User(email, userName, password, userGender, userFavcol, userDOB);
+            String pass = rs.getString(3);
+            String perm = rs.getString(7);
+            if (pass.equals(password) && perm.equals(permission)) {
+                String name = rs.getString(2);
+                String gender = rs.getString(4);
+                String favcol = rs.getString(5);
+                String DOB = rs.getString(6);              
+                return new User(email, name, password, gender, favcol, DOB, permission);
             }
         }
-        //search the ResultSet for a user using the parameters               
         return null;
     }
 
@@ -73,7 +73,8 @@ public class UserDBManager {
             String gender = rs.getString(4);
             String favcol = rs.getString(5);
             String dob = rs.getString(6);
-            temp.add(new User(email, name, password, gender, favcol, dob));
+            String permission = rs.getString(7);
+            temp.add(new User(email, name, password, gender, favcol, dob, permission));
         }
          return temp;
     }

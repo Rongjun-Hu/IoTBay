@@ -37,7 +37,8 @@ public class UpdateServlet extends HttpServlet {
         String gender = request.getParameter("gender");
         String favcol = request.getParameter("favcol");
         String dob = request.getParameter("dob");
-        User user = new User(email, name, password, gender, favcol, dob);
+        String permission = request.getParameter("permission");
+        User user = new User(email, name, password, gender, favcol, dob, permission);
         //5- retrieve the manager instance from session      
         UserDBManager manager = (UserDBManager) session.getAttribute("manager");
         try {

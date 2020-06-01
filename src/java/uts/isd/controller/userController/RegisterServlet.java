@@ -36,6 +36,8 @@ public class RegisterServlet extends HttpServlet {
         String gender = request.getParameter("gender");
         String favcol = request.getParameter("favcol");
         String dob = request.getParameter("dob");
+        String permission = request.getParameter("permission");
+        
         UserDBManager manager = (UserDBManager) session.getAttribute("manager");
         validator.clear(session);
 
@@ -50,13 +52,13 @@ public class RegisterServlet extends HttpServlet {
             request.getRequestDispatcher("register.jsp").include(request, response);
         } else {
             try {
-                User exist = manager.findUser(email, password);
+                User exist = manager.findUser(email, password, permission);
                 if (exist != null) {
                     session.setAttribute("existErr", "User already exists in the Database");
                     request.getRequestDispatcher("register.jsp").include(request, response);
                 } else {
                     manager.addUser(email, name, password, gender, favcol, dob);
-                    User user = new User(email, name, password, gender, favcol, dob);
+                    User user = new User(email, name, password, gender, favcol, dob, permission);
                     session.setAttribute("user", user);
                     request.getRequestDispatcher("main.jsp").include(request, response);
                 }

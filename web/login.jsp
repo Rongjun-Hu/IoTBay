@@ -27,13 +27,26 @@
             <table>
                 <tr>
                     <td>Email:</td>
-                    <td><input type="text" placeholder="<%=(emailErr != null ? emailErr : "Enter email")%>" name="email" required></td>
+                    <td><input type="text" placeholder="<%=(emailErr != null ? emailErr : "Enter email")%>" name="email"></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td><input type="password" placeholder="<%=(passErr != null ? passErr : "Enter password")%>" name="password" required></td>
-                </tr>                                          
-                <tr><td></td>
+                    <td><input type="password" placeholder="<%=(passErr != null ? passErr : "Enter password")%>" name="password"></td>
+                </tr> 
+                <tr>
+                    <td>I want to sign in as:</td>
+                    <td><input type="radio" id="anony" name="permission" value="anony">
+                        <lable for="anony">Anonymous</lable>
+                    </td>
+                    <td><input type="radio" id="customer" name="permission" value="customer" checked>
+                        <lable for="customer">Customer</lable>
+                    </td>
+                    <td><input type="radio" id="staff" name="permission" value="staff">
+                        <lable for="staff">Staff</lable>
+                    </td>
+               </tr>
+                <tr>
+                    <td></td>
                     <td><a class="button" href="index.jsp">Cancel</a>
                         <input class="button" type="submit" value="Sign In">
                     </td>

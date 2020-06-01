@@ -9,21 +9,21 @@ import java.io.Serializable;
 
 /**
  *
- * @author diamo
+ * @author apple
  */
 public class Device implements Serializable {
 
     private int id;
     private String name;
     private double price;
-    private String description;
+    private String type;
     private int stock;
 
-    public Device(int id, String name, double price, String description, int stock) {
+    public Device(int id, String name, double price, String type, int stock) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.description = description;
+        this.type = type;
         this.stock = stock;
     }
 
@@ -51,23 +51,23 @@ public class Device implements Serializable {
         this.price = price;
     }
 
-    public String getDescription() {
-        return description;
+    public String getType() {
+        return type;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setType(String type) {
+        this.type = type;
     }
     
     public void setStock(int stock){
         this.stock = stock;
     }
     
-    public void setDevice(int id, String name, double price, String description, int stock){
+    public void setDevice(int id, String name, double price, String type, int stock){
         setId(id);
         setName(name);
         setPrice(price);
-        setDescription(description);
+        setType(type);
         setStock(stock);
     }
 

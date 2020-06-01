@@ -29,7 +29,6 @@
             </thead>
             <tbody>
             <tr>
-                
                 <td>${user.email}</td>
                 <td>${user.name}</td>
                 <td>${user.password}</td>

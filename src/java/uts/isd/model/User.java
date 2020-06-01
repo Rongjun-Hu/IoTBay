@@ -17,17 +17,18 @@ public class User {
     private String gender;
     private String favcol;
     private String dob;
+    private String permission;
 
     
     //insert a constructor that intializes thefields
-    public User(String email, String name, String password, String gender, String favcol, String dob) {
+    public User(String email, String name, String password, String gender, String favcol, String dob, String permission) {
         this.email = email;
         this.name = name;
         this.password = password;
         this.gender = gender;
         this.favcol = favcol;
         this.dob = dob;
-
+        this.permission = permission;
     }
     
     public static void updateUser(HttpSession session, HttpServletRequest request, User user) {
@@ -37,7 +38,8 @@ public class User {
         String gender = request.getParameter("gender");
         String dob = request.getParameter("dob");
         String favcol = request.getParameter("favcol");
-        user = new User(email, name ,password, gender, favcol, dob);
+        String permission = request.getParameter("permission");
+        user = new User(email, name ,password, gender, favcol, dob, permission);
         session.setAttribute("user", user);
     }
     
@@ -89,6 +91,14 @@ public class User {
 
     public void setDob(String dob) {
         this.dob = dob;
+    }
+
+    public String getPermission() {
+        return permission;
+    }
+
+    public void setPermission(String permission) {
+        this.permission = permission;
     }
 
        
