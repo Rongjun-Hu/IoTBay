@@ -17,7 +17,7 @@ public class Device implements Serializable {
     private String name;
     private double price;
     private String description;
-    private int stock
+    private int stock;
 
     public Device(int id, String name, double price, String description, int stock) {
         this.id = id;
@@ -58,7 +58,7 @@ public class Device implements Serializable {
         this.description = description;
     }
     
-    public void setStock(Int stock){
+    public void setStock(int stock){
         this.stock = stock;
     }
     
