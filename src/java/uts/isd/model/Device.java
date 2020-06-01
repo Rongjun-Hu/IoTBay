@@ -24,6 +24,7 @@ public class Device implements Serializable {
         this.name = name;
         this.price = price;
         this.description = description;
+        this.stock = stock;
     }
 
     public int getId() {
