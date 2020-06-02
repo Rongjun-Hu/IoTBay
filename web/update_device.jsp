@@ -16,7 +16,8 @@
     <body>
         <h1 class="pro_h1">Update the Device</h1>
         <%
-            Device device = (Device) session.getAttribute("device");
+            Device device = (Device) request.getAttribute("device");
+            
         %>
 
 
