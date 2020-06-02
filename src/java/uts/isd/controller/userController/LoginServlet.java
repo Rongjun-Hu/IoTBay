@@ -115,7 +115,7 @@ public class LoginServlet extends HttpServlet {
         } 
         else if (user == null) {
             //15-set user does not exist error to the session 
-            session.setAttribute("existErr", "Customer does not exist in the database");
+            session.setAttribute("existErr", "User does not exist in the database");
             //16- redirect user back to the login.jsp
             request.getRequestDispatcher("login.jsp").include(request, response);
         } 

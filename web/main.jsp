@@ -35,8 +35,20 @@
 
         <div>
             <jsp:include page="profile.jsp" flush="true" />
+            
+            <form action="ReadDeviceServlet" method="post">
+            <table>
+                <tr><td>Search Condition</td></tr>
+                <tr><td>Device Name:</td><td><input type="text" placeholder="Search by Name" name="name"></td></tr>
+                <tr><td>Device Type:</td><td><input type="text" placeholder="Search by Type" name="type"></td></tr>
+                <tr><input class="button" type="submit" value="View Devices"></tr>
+            </table>
+            </form>
+            
+            <jsp:include page="deviceMGMT.jsp?permission='<%= perm%>'" flush="true" />
+            
             <% if (perm.equals("staff")) { %>
-                <jsp:include page="deviceMGMT.jsp" flush="true" />
+                
             <% } %>
         </div>
 

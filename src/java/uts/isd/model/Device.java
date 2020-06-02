@@ -58,6 +58,10 @@ public class Device implements Serializable {
     public void setType(String type) {
         this.type = type;
     }
+
+    public int getStock() {
+        return stock;
+    }
     
     public void setStock(int stock){
         this.stock = stock;
