@@ -1,7 +1,6 @@
 package uts.isd.controller.deviceController;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
@@ -39,6 +38,5 @@ public class ReadDeviceServlet extends HttpServlet {
             Logger.getLogger(ReadDeviceServlet.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
         }
-        // request.getRequestDispatcher("deviceMGMT.jsp").include(request, response);
     }
 }

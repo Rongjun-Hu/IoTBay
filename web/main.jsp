@@ -45,10 +45,10 @@
             </table>
             </form>
             
-            <jsp:include page="deviceMGMT.jsp?permission='<%= perm%>'" flush="true" />
-            
             <% if (perm.equals("staff")) { %>
-                
+                <jsp:include page="device_staff.jsp" flush="true" />
+            <% } else { %>
+                <jsp:include page="device_customer.jsp" flush="true" />
             <% } %>
         </div>
 

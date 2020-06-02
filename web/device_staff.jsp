@@ -1,5 +1,5 @@
 <%-- 
-    Document   : deviceMGMT
+    Document   : device_customer
     Created on : 2020-6-2, 3:59:39
     Author     : apple
 --%>
@@ -31,19 +31,21 @@
             <tbody>
                 <% for(Device device : devices){ %>
                 <tr>
-                    <td><%= device.getId() %></td>
-                    <td><%= device.getName() %></td>
-                    <td><%= device.getPrice() %></td>
-                    <td><%= device.getType() %></td>
-                    <td><%= device.getStock() %></td>
-                                    <% if ((request.getParameter("permission")).equals("staff")) { %>
-                    <td>HII</td>
-                <% } %>
+                    <td>${device.id}</td>
+                    <td>${device.name}</td>
+                    <td>${device.price}</td>
+                    <td>${device.type}</td>
+                    <td>${device.stock}</td>
+                    <td> 
+                        <a href="update_device.jsp?device='${device}'">Update</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="DeleteDeviceServlet?id='${device.id}'">Delete</a>
+                    </td>
                 </tr>
                 <% } %>
-                
-
-                
+                <tr>
+                    <a href="create_device.jsp">Create</a>
+                </tr>
             </tbody>
         </table>
     </body>

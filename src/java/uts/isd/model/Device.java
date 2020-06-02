@@ -13,13 +13,13 @@ import java.io.Serializable;
  */
 public class Device implements Serializable {
 
-    private int id;
+    private String id;
     private String name;
     private double price;
     private String type;
     private int stock;
 
-    public Device(int id, String name, double price, String type, int stock) {
+    public Device(String id, String name, double price, String type, int stock) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -27,11 +27,11 @@ public class Device implements Serializable {
         this.stock = stock;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -67,7 +67,7 @@ public class Device implements Serializable {
         this.stock = stock;
     }
     
-    public void setDevice(int id, String name, double price, String type, int stock){
+    public void setDevice(String id, String name, double price, String type, int stock){
         setId(id);
         setName(name);
         setPrice(price);

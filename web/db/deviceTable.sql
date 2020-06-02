@@ -3,9 +3,11 @@
  * Created: 2020-6-2
  */
 
+-- DROP TABLE DEVICES;
+
 CREATE TABLE DEVICES
 (
-Id integer,
+Id varchar(10),
 Name varchar(15),
 Price double,
 Type varchar(10),
@@ -14,10 +16,8 @@ PRIMARY KEY(Id));
 
 INSERT INTO DEVICES (ID, NAME, PRICE, TYPE, STOCK)
 VALUES
-(1001, 'macbook Air', 1140.99, 'laptop', 4000),
-(1002, 'macbook Pro', 1580.99, 'laptop', 3500),
-(2001, 'razor', 40.99, 'mouse', 8500);
+('a1001', 'macbook Air', 1140.99, 'laptop', 4000),
+('b1002', 'macbook Pro', 1580.99, 'laptop', 3500),
+('a2001', 'razor', 40.99, 'mouse', 8500);
 
 SELECT * FROM DEVICES;
-
-SELECT * FROM IOTUSER.DEVICES WHERE  TYPE = 'laptop';
