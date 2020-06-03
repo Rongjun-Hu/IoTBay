@@ -24,17 +24,15 @@ public class DeleteDeviceServlet extends HttpServlet {
         
         HttpSession session = request.getSession();  
         
-        int id =  (int) request.getAttribute("id");
+        int id =  Integer.parseInt(request.getParameter("id"));
         
         DeviceDBManager manager = (DeviceDBManager) session.getAttribute("manager2");
-        
         try {
             manager.deleteDevice(id);
-            //request.getRequestDispatcher("main.jsp").include(request, response);
+            request.getRequestDispatcher("main.jsp").include(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(DeleteDeviceServlet.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
         }
-        request.getRequestDispatcher("main.jsp").include(request, response);
     }
 }

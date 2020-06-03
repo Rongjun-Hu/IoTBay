@@ -17,33 +17,23 @@ public class Validator implements Serializable {
     public boolean validate(String pattern, String input) {
         Pattern regEx = Pattern.compile(pattern);
         Matcher match = regEx.matcher(input);
-
         return match.matches();
-
     }
 
     public boolean validateEmail(String email) {
-
         return validate(emailPattern, email);
-
     }
 
     public boolean validateName(String name) {
-
         return validate(namePattern, name);
-
     }
 
     public boolean validatePassword(String password) {
-
         return validate(passwordPattern, password);
-
     }
 
     public boolean checkEmpty(String email, String password) {
-
         return email.isEmpty() || password.isEmpty();
-
     }
     
     public void clear(HttpSession session) {
@@ -51,7 +41,6 @@ public class Validator implements Serializable {
         session.setAttribute("passErr", "Enter password");
         session.setAttribute("existErr", "");
         session.setAttribute("nameErr", "Enter name");
-
     }
 
 }

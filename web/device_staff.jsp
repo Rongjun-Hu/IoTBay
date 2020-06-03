@@ -38,7 +38,8 @@
                     <td><%=device.getType()%></td>
                     <td><%=device.getStock()%></td>
                     <td> 
-                        <a href="update_device.jsp?device=<%=device%>">Update</a>
+                        <a href="update_device.jsp?id=<%=device.getId()%>&name=<%=device.getName()%>
+                           &price=<%=device.getPrice()%>&type=<%=device.getType()%>&stock=<%=device.getStock()%>">Update</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="DeleteDeviceServlet?id=<%=device.getId()%>">Delete</a>
                     </td>
