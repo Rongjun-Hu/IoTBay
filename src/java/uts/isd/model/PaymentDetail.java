@@ -13,12 +13,36 @@ import java.io.Serializable;
  */
 public class PaymentDetail implements Serializable {
 
+    private User user;
+    private String paymentMethod;
     private String bankCard;
     private String cvv;
     private String expiryYear;
     private String expiryMonth;
 
     public PaymentDetail() {
+        this.user = user;
+        this.paymentMethod = paymentMethod;
+        this.bankCard = bankCard;
+        this.cvv = cvv;
+        this.expiryYear = expiryYear;
+        this.expiryMonth = expiryMonth;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setMethodOfPayment(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
     public String getBankCard() {
