@@ -29,13 +29,14 @@
                 <th>   </th>
             </thead>
             <tbody>
+                <!-- EL dosen't works, use JSP instead -->
                 <% for(Device device : devices){ %>
                 <tr>
-                    <td>${device.id}</td>
-                    <td>${device.name}</td>
-                    <td>${device.price}</td>
-                    <td>${device.type}</td>
-                    <td>${device.stock}</td>
+                    <td><%=device.getId()%></td>
+                    <td><%=device.getName()%></td>
+                    <td><%=device.getPrice()%></td>
+                    <td><%=device.getType()%></td>
+                    <td><%=device.getStock()%></td>
                     <td> Order </td>
                 </tr>
                 <% } %>

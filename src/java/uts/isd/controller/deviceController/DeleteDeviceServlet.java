@@ -22,16 +22,19 @@ public class DeleteDeviceServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        HttpSession session = request.getSession();   
-        String id = request.getParameter("id");
+        HttpSession session = request.getSession();  
+        
+        int id =  (int) request.getAttribute("id");
+        
         DeviceDBManager manager = (DeviceDBManager) session.getAttribute("manager2");
         
         try {
             manager.deleteDevice(id);
-            request.getRequestDispatcher("main.jsp").include(request, response);
+            //request.getRequestDispatcher("main.jsp").include(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(DeleteDeviceServlet.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
         }
+        request.getRequestDispatcher("main.jsp").include(request, response);
     }
 }

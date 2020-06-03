@@ -20,7 +20,6 @@
                 <h1 class="index_h1">IoTBay Home Page</h1>
                 <a class="button" href="register.jsp">Register</a>
                 <a class="button" href="login.jsp">Login</a>
-
             </div>
         </div>
         <jsp:include page="/ConnServlet" flush="true" />

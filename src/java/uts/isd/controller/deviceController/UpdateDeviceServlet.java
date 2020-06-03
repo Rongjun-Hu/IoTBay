@@ -20,22 +20,28 @@ import uts.isd.model.dao.DeviceDBManager;
  */
 public class UpdateDeviceServlet extends HttpServlet {
 
-//    @Override
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-//            throws ServletException, IOException {
-//        
-//        HttpSession session = request.getSession();   
-//        String id = request.getParameter("id");
-//        DeviceDBManager manager = (DeviceDBManager) session.getAttribute("manager2");
-//        
-//        Device device = null;
-//        try {
-//            device = manager.findDevice(id);
-//            session.setAttribute("device", device);
-//            request.getRequestDispatcher("update_device.jsp").include(request, response);
-//        } catch (SQLException ex) {
-//            Logger.getLogger(ReadDeviceServlet.class.getName()).log(Level.SEVERE, null, ex);
-//            System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
-//        }
-//    }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        HttpSession session = request.getSession();  
+        
+        int id = (int) request.getAttribute("id");
+        String name = request.getParameter("name");
+        double price = (double) request.getAttribute("price");
+        String type = request.getParameter("type");
+        int stock = (int) request.getAttribute("stock");
+        
+        DeviceDBManager manager = (DeviceDBManager) session.getAttribute("manager2");
+        
+        Device device = null;
+        try {
+            manager.updateDevice(id, name, price, type, stock);
+            // session.setAttribute("device", device);
+            request.getRequestDispatcher("main.jsp").include(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(ReadDeviceServlet.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
+        }
+    }
 }

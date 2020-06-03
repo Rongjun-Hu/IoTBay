@@ -32,7 +32,7 @@ public class DeviceDBManager {
         ArrayList<Device> temp = new ArrayList();
         
         while (rs.next()) {
-            String id = rs.getString(1);
+            int id = rs.getInt(1);
             String nam = rs.getString(2);
             double price = rs.getDouble(3);
             String typ = rs.getString(4);
@@ -56,11 +56,11 @@ public class DeviceDBManager {
 //        return null;
 //    }
     
-    public void updateDevice(String id, String name, double price, String type, int stock) throws SQLException { 
-        st.executeUpdate("UPDATE IOTUSER.USERS SET NAME ='" +name+ "',PRICE =" +price+ ",TYPE ='" +type+ "',STOCK =" +stock+ "WHERE ID ='" +id+ "'");
+    public void updateDevice(int id, String name, double price, String type, int stock) throws SQLException { 
+        st.executeUpdate("UPDATE IOTUSER.USERS SET NAME ='" +name+ "',PRICE =" +price+ ",TYPE ='" +type+ "',STOCK =" +stock+ "WHERE ID =" +id);
     }
 
-    public void deleteDevice(String id) throws SQLException {
-        st.executeUpdate("DELECT FROM IOTUSER.DEVICES WHERE ID = '" + id + "'");
+    public void deleteDevice(int id) throws SQLException {
+        st.executeUpdate("DELETE FROM IOTUSER.DEVICES WHERE ID =" + id);
     }
 }
