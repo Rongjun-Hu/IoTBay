@@ -3,7 +3,7 @@
  * Created: 2020-6-2
  */
 
--- DROP TABLE USERS;
+--DROP TABLE USERS;
 
 CREATE TABLE USERS
 (
