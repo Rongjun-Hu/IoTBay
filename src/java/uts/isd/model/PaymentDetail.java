@@ -20,8 +20,8 @@ public class PaymentDetail implements Serializable {
     private String expiryYear;
     private String expiryMonth;
 
-    public PaymentDetail() {
-        this.user = user;
+    public PaymentDetail(User user, String paymentMethod, String bankCard, String cvv, String expiryYear,String expiryMonth) {
+        this.user = user; 
         this.paymentMethod = paymentMethod;
         this.bankCard = bankCard;
         this.cvv = cvv;
