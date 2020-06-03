@@ -26,6 +26,7 @@
         <div class="main_btn">
             <a class="button" href="EditServlet?email='<%=email%>'&password='<%=pass%>'&permission='<%=perm%>'">Account</a>
             <!--<a class="button" href="edit.jsp"> Account</a>-->
+            <a class = "button" href='paymentDetail.jsp'> Payment Setting</a>
             <a class="button" href="LogoutServlet">Logout</a>
         </div>
 
@@ -51,6 +52,6 @@
                 <jsp:include page="device_customer.jsp" flush="true" />
             <% } %>
         </div>
-
+       
     </body>
 </html>
