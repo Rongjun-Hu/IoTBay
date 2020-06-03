@@ -13,36 +13,26 @@ import java.io.Serializable;
  */
 public class PaymentDetail implements Serializable {
 
-    private User user;
-    private String paymentMethod;
+    private int id;
     private String bankCard;
     private String cvv;
     private String expiryYear;
     private String expiryMonth;
 
-    public PaymentDetail(User user, String paymentMethod, String bankCard, String cvv, String expiryYear,String expiryMonth) {
-        this.user = user; 
-        this.paymentMethod = paymentMethod;
+    public PaymentDetail(int id, String bankCard, String cvv, String expiryYear, String expiryMonth) {
+        this.id = id;
         this.bankCard = bankCard;
         this.cvv = cvv;
         this.expiryYear = expiryYear;
         this.expiryMonth = expiryMonth;
     }
 
-    public User getUser() {
-        return user;
+    public int getId() {
+        return id;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public String getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    public void setMethodOfPayment(String paymentMethod) {
-        this.paymentMethod = paymentMethod;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getBankCard() {
@@ -75,5 +65,13 @@ public class PaymentDetail implements Serializable {
 
     public void setExpiryMonth(String expiryMonth) {
         this.expiryMonth = expiryMonth;
+    }
+
+    public void setPaymentDetail(int id, String paymentMethod, String bankCard, String cvv, String expiryYear, String expiryMonth) {
+        setId(id);
+        setbankCard(bankCard);
+        setCvv(cvv);
+        setExpiryYear(expiryYear);
+        setExpiryMonth(expiryMonth);
     }
 }
