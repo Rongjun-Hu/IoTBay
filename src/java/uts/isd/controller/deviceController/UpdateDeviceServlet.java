@@ -31,8 +31,7 @@ public class UpdateDeviceServlet extends HttpServlet {
         int stock = Integer.parseInt(request.getParameter("stock"));
         // (double) request.getAttribute("price")  doesn't work on form-post
         
-        DeviceDBManager manager = (DeviceDBManager) session.getAttribute("manager2");
-        
+        DeviceDBManager manager = (DeviceDBManager) session.getAttribute("manager2");     
         try {
             manager.updateDevice(id, name, price, type, stock);
             request.getRequestDispatcher("main.jsp").include(request, response);
