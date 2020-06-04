@@ -38,6 +38,7 @@
                     <td><%=device.getType()%></td>
                     <td><%=device.getStock()%></td>
                     <td> Order </td>
+<!--                    the order feature may start here-->
                 </tr>
                 <% } %>
             </tbody>

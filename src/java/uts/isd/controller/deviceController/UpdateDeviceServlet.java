@@ -2,7 +2,6 @@ package uts.isd.controller.deviceController;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpSession;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import uts.isd.model.Device;
 import uts.isd.model.dao.DeviceDBManager;
 
 /**
@@ -26,18 +24,16 @@ public class UpdateDeviceServlet extends HttpServlet {
         
         HttpSession session = request.getSession();  
         
-        int id = (int) request.getAttribute("id");
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        double price = (double) request.getAttribute("price");
+        double price = Double.parseDouble(request.getParameter("price"));
         String type = request.getParameter("type");
-        int stock = (int) request.getAttribute("stock");
+        int stock = Integer.parseInt(request.getParameter("stock"));
+        // (double) request.getAttribute("price")  doesn't work on form-post
         
-        DeviceDBManager manager = (DeviceDBManager) session.getAttribute("manager2");
-        
-        Device device = null;
+        DeviceDBManager manager = (DeviceDBManager) session.getAttribute("manager2");     
         try {
             manager.updateDevice(id, name, price, type, stock);
-            // session.setAttribute("device", device);
             request.getRequestDispatcher("main.jsp").include(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(ReadDeviceServlet.class.getName()).log(Level.SEVERE, null, ex);

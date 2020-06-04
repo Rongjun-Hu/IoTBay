@@ -18,6 +18,11 @@ public class DeviceDBManager {
         st = conn.createStatement();
     }
 
+    public void createDevice(String name, double price, String type, int stock) throws SQLException {                    
+        st.executeUpdate("INSERT INTO IOTUSER.DEVICES(NAME, PRICE, TYPE, STOCK) VALUES('" + name + "'," + price + ",'" + type + "'," + stock + ")");
+    }
+    
+    
     public ArrayList<Device> findDevices(String name, String type) throws SQLException {
 
         String fetch = "SELECT * FROM IOTUSER.DEVICES WHERE NAME ='" + name + "'" + "AND TYPE ='" + type + "'";
@@ -57,10 +62,21 @@ public class DeviceDBManager {
 //    }
     
     public void updateDevice(int id, String name, double price, String type, int stock) throws SQLException { 
-        st.executeUpdate("UPDATE IOTUSER.USERS SET NAME ='" +name+ "',PRICE =" +price+ ",TYPE ='" +type+ "',STOCK =" +stock+ "WHERE ID =" +id);
+        st.executeUpdate("UPDATE IOTUSER.DEVICES SET NAME ='" +name+ "',PRICE =" +price+ ",TYPE ='" +type+ "',STOCK =" +stock+ "WHERE ID =" +id);
     }
 
     public void deleteDevice(int id) throws SQLException {
         st.executeUpdate("DELETE FROM IOTUSER.DEVICES WHERE ID =" + id);
     }
+    
+    public boolean idExist(int id) throws SQLException {
+        ResultSet rs = st.executeQuery("SELECT ID FROM DEVICES");
+        while (rs.next()) {
+            if (id == rs.getInt(1)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
 }

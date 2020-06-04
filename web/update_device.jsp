@@ -16,16 +16,20 @@
     <body>
         <h1 class="pro_h1">Update the Device</h1>
         <%
-            Device device = (Device) request.getAttribute("device");
+            int id = Integer.parseInt(request.getParameter("id"));
+            String name = request.getParameter("name");
+            double price = Double.parseDouble(request.getParameter("price"));
+            String type = request.getParameter("type");
+            int stock = Integer.parseInt(request.getParameter("stock"));
         %>
         <form class="form" action="UpdateDeviceServlet" method="post">
             <table>
                 <!-- EL dosen't works, use JSP instead -->
-                <tr><td><input type="hidden" name="id" value="${device.id}"></td></tr>
-                <tr><td>Name:</td><td><input type="text" name="name" value="${device.name}" required></td></tr>
-                <tr><td>Price:</td><td><input type="text" name="name" value="${device.price}" required></td></tr>
-                <tr><td>Type:</td><td><input type="text" name="name" value="${device.type}" required></td></tr>
-                <tr><td>Stock:</td><td><input type="text" name="name" value="${device.stock}" required></td></tr>
+                <tr><td><input type="hidden" name="id" value="<%=id%>"></td></tr>
+                <tr><td>Name:</td><td><input type="text" name="name" value="<%=name%>" required></td></tr>
+                <tr><td>Price:</td><td><input type="number" name="price" value="<%=price%>" min="1" step="0.01"></td></tr>
+                <tr><td>Type:</td><td><input type="text" name="type" value="<%=type%>" required></td></tr>
+                <tr><td>Stock:</td><td><input type="number" name="stock" value="<%=stock%>" min="1"></td></tr>
                 <tr><td></td><td><input class="button" type="submit" value="Update"></td></tr>
             </table>
         </form>
