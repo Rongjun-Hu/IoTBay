@@ -39,7 +39,7 @@
         <form class="form" action="PaymentSettingServlet" method="post">
             <table>
                 <tr><td>ID(Email):</td><td><input type="text" placeholder="<%=(emailErr != null ? emailErr : "Enter Email")%>" name="email" required></td></tr>
-                <tr><td>Card Number:</td><td><input type="text" placeholder="<%=(cardErr != null ? emailErr : "Enter Card Number")%>"name="cardNumber required></td></tr>
+                <tr><td>Card Number:</td><td><input type="text" placeholder="<%=(cardErr != null ? emailErr : "Enter Card Number")%>"name="cardNumber" required></td></tr>
 
                 <tr><td>CVV:</td><td><input type="text" placeholder="<%=(cvvErr != null ? cvvErr : "Enter CVV")%>" required></td></tr>
 
@@ -49,6 +49,7 @@
                     <td><a class="button" href="main.jsp">Cancel</a>
                         <input class="button" type="submit" value="Confirm">
                     </td>
+                <a class="button" href="paymentDetail.jsp">View Current Payment Detail</a>
                 </tr>
             </table>
         </form>
