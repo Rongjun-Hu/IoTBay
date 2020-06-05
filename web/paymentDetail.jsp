@@ -27,7 +27,6 @@
         <hr>
         <div class="main_btn">
             <a class="button" href="EditServlet?email='<%=email%>'&password='<%=pass%>'&permission='<%=perm%>'">Account</a>
-            <!--<a class="button" href="edit.jsp"> Account</a>-->
             <a class="button" href="LogoutServlet">Logout</a>
         </div>
 
@@ -38,6 +37,7 @@
         <%
             PaymentDetail paymentDetail  = (PaymentDetail) session.getAttribute("paymentDetail");
          %>
+            <form action="ViewPaymentDetailServlet" method="post">
          <table id="profile_table">
             <thead>
                 <th>Id</th>

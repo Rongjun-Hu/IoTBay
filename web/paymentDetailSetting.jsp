@@ -49,7 +49,7 @@
                     <td><a class="button" href="main.jsp">Cancel</a>
                         <input class="button" type="submit" value="Confirm">
                     </td>
-                <a class="button" href="paymentDetail.jsp">View Current Payment Detail</a>
+                <a class="button" href="paymentDetail.jsp"  <form action="ViewPaymentDetailServlet" method="post">View Current Payment Detail</a>
                 </tr>
             </table>
         </form>
