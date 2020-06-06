@@ -13,24 +13,24 @@ import java.io.Serializable;
  */
 public class PaymentDetail implements Serializable {
 
-    private int id;
+    private int customerId;
     private String bankCard;
     private String cvv;
     private String expiryDate;
 
-    public PaymentDetail(int id, String bankCard, String cvv, String expiryDate) {
-        this.id = id;
+    public PaymentDetail(int customerId, String bankCard, String cvv, String expiryDate) {
+        this.customerId = customerId;
         this.bankCard = bankCard;
         this.cvv = cvv;
         this.expiryDate = expiryDate;
     }
 
-    public int getId() {
-        return id;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCustomerId(int CustmoerId) {
+        this.customerId = customerId;
     }
 
     public String getBankCard() {
@@ -57,8 +57,8 @@ public class PaymentDetail implements Serializable {
         this.expiryDate = expiryDate;
     }
 
-    public void setPaymentDetail(int id, String bankCard, String cvv, String expiryDate) {
-        setId(id);
+    public void setPaymentDetail(int customerId, String bankCard, String cvv, String expiryDate) {
+        setCustomerId(customerId);
         setbankCard(bankCard);
         setCvv(cvv);
         setExpiryDate(expiryDate);
