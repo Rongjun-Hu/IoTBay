@@ -29,16 +29,17 @@ public class CreatePaymentDetailServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        String id = request.getParameter("email");
+        String id;
+        id = request.getParameter("email");
         String bankCard = request.getParameter("bankCard");
         String cvv = request.getParameter("cvv");
         String expiryDate = request.getParameter("expiryDate");
         String permission = request.getParameter("permission");
 
-        PaymentDetailDBManager manager = (PaymentDetailDBManager) session.getAttribute("manager");
+        PaymentDetailDBManager paymentDetailDBmanager = (PaymentDetailDBManager) session.getAttribute(" paymentDetailDBmanager");
 
         try {
-            manager.createPaymentDetail(id, bankCard, cvv, expiryDate);
+             paymentDetailDBmanager.addPaymentDetail(id, bankCard, cvv, expiryDate);
             request.getRequestDispatcher("main.jsp").include(request, response);
         }
             catch (SQLException ex) {
