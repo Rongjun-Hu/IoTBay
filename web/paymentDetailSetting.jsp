@@ -36,12 +36,12 @@
             String cvvErr = (String) session.getAttribute("Cvv Error");
             String cardErr = (String) session.getAttribute("Card Error");
         %>
-        <form class="form" action="PaymentSettingServlet" method="post">
+        <form class="form" action="CreatePaymentSettingServlet" method="post">
             <table>
-                <tr><td>ID(Email):</td><td><input type="text" placeholder="<%=(emailErr != null ? emailErr : "Enter Email")%>" name="email" required></td></tr>
-                <tr><td>Card Number:</td><td><input type="text" placeholder="<%=(cardErr != null ? emailErr : "Enter Card Number")%>"name="cardNumber" required></td></tr>
+                <tr><td>ID(Email):</td><td><input type="text" placeholder="<%=(emailErr != null ? emailErr : "Enter Email")%>" name="CustomerId" required></td></tr>
+                <tr><td>Card Number:</td><td><input type="text" placeholder="<%=(cardErr != null ? cardErr : "Enter Card Number")%>"name="bankCard" required></td></tr>
 
-                <tr><td>CVV:</td><td><input type="text" placeholder="<%=(cvvErr != null ? cvvErr : "Enter CVV")%>" required></td></tr>
+                <tr><td>CVV:</td><td><input type="text" placeholder="<%=(cvvErr != null ? cvvErr : "Enter CVV")%>" name="cvv" required></td></tr>
 
                 <tr><td>Expiry Date:</td><td><input type="date" name="expiryDate" required></td></tr>                
 
