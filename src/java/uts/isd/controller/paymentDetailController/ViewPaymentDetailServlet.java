@@ -22,7 +22,7 @@ import uts.isd.model.PaymentDetail;
 
 import uts.isd.model.dao.PaymentDetailDBManager;
 
-public class CreatePaymentDetailServlet extends HttpServlet {
+public class ViewPaymentDetailServlet extends HttpServlet {
 
     @Override
 
@@ -48,5 +48,3 @@ public class CreatePaymentDetailServlet extends HttpServlet {
     }
 
 }
-
-
