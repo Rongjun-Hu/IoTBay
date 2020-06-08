@@ -44,6 +44,30 @@
         <servlet-name>DeleteDeviceServlet</servlet-name>
         <servlet-class>uts.isd.controller.deviceController.DeleteDeviceServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateOrderServlet</servlet-name>
+        <servlet-class>uts.isd.controller.orderController.CreateOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadOrderServlet</servlet-name>
+        <servlet-class>uts.isd.controller.orderController.ReadOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateOrderServlet</servlet-name>
+        <servlet-class>uts.isd.controller.orderController.UpdateOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteOrderServlet</servlet-name>
+        <servlet-class>uts.isd.controller.orderController.DeleteOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewAnOrderServlet</servlet-name>
+        <servlet-class>uts.isd.controller.orderController.ViewAnOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteOrderListServlet</servlet-name>
+        <servlet-class>uts.isd.controller.orderController.DeleteOrderListServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
         <url-pattern>/ConnServlet</url-pattern>
@@ -87,6 +111,30 @@
     <servlet-mapping>
         <servlet-name>DeleteDeviceServlet</servlet-name>
         <url-pattern>/DeleteDeviceServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateOrderServlet</servlet-name>
+        <url-pattern>/CreateOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReadOrderServlet</servlet-name>
+        <url-pattern>/ReadOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateOrderServlet</servlet-name>
+        <url-pattern>/UpdateOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteOrderServlet</servlet-name>
+        <url-pattern>/DeleteOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewAnOrderServlet</servlet-name>
+        <url-pattern>/ViewAnOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteOrderListServlet</servlet-name>
+        <url-pattern>/DeleteOrderListServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
