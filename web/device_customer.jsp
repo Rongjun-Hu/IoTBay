@@ -37,7 +37,9 @@
                     <td><%=device.getPrice()%></td>
                     <td><%=device.getType()%></td>
                     <td><%=device.getStock()%></td>
-                    <td><a href="order.jsp?id=<%=device.getId()%>">Order</a></td>
+                    <td> <a href="createOrder.jsp?id=<%=device.getId()%>&name=<%=device.getName()%>
+                       &price=<%=device.getPrice()%>&type=<%=device.getType()%>&stock=<%=device.getStock()%>">Order</a> </td>
+
                 </tr>
                 <% } %>
             </tbody>
