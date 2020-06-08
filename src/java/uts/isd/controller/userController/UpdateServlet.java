@@ -46,7 +46,7 @@ public class UpdateServlet extends HttpServlet {
                 session.setAttribute("user", user);
                 manager.updateUser(email, name, password, gender, favcol, dob);
                 session.setAttribute("update", "Update was successful");
-                request.getRequestDispatcher("login.jsp").include(request, response);
+                request.getRequestDispatcher("main.jsp").include(request, response);
             } else {
                 session.setAttribute("update", "Update was not successful");
                 request.getRequestDispatcher("edit.jsp").include(request, response);

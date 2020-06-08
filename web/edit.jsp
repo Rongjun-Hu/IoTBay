@@ -38,7 +38,7 @@
                 </td>
                 <td>
                     <input type="radio"  name="gender" value="${user.gender}" checked>
-                <lable for="male">Female</lable>
+                <lable for="female">Female</lable>
                 </td>
                 </tr>
                 <tr><td>Date of Birth:</td><td><input type="date" name="dob" value="${user.dob}"></td></tr>
@@ -54,6 +54,7 @@
                         </select>
                     </td>
                 </tr>
+                <tr><td><input type="hidden" name="permission" value="${user.permission}"></td></tr>
                 <tr><td></td>
                     <td>
 <!--                        <input type="hidden" name="update" value="Update was successful" >-->

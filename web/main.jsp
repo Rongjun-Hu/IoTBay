@@ -25,9 +25,9 @@
         <hr>
         <div class="main_btn">
             <a class="button" href="EditServlet?email='<%=email%>'&password='<%=pass%>'&permission='<%=perm%>'">Account</a>
-            <a class = "button" href='paymentDetailSetting.jsp'> Payment Setting</a>
-            <a class="button" href="LogoutServlet">Logout</a>
+            <a class="button" href='paymentDetailSetting.jsp'> Payment Setting</a>
             <a class="button" href="shipment.jsp">Shipment</a>
+            <a class="button" href="LogoutServlet">Logout</a>
         </div>
 
         <p style="text-align: right; color: yellow; "> 

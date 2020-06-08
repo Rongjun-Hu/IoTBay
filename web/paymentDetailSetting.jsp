@@ -7,7 +7,7 @@
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <link rel="stylesheet" href="css/demo.css">
-            <title>Main Page</title>
+            <title>Payment Setting Page</title>
         </head>
 
         <%
@@ -37,7 +37,7 @@
         %>
         <form class="form" action="CreatePaymentSettingServlet" method="post">
             <table>
-                <tr><td>ID(Email):</td><td><input type="text" placeholder="<%=(emailErr != null ? emailErr : "Enter Email")%>" name="CustomerId" required></td></tr>
+                
                 <tr><td>Card Number:</td><td><input type="text" placeholder="<%=(cardErr != null ? cardErr : "Enter Card Number")%>"name="bankCard" required></td></tr>
 
                 <tr><td>CVV:</td><td><input type="text" placeholder="<%=(cvvErr != null ? cvvErr : "Enter CVV")%>" name="cvv" required></td></tr>

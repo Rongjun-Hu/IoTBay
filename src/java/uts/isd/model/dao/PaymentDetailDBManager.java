@@ -50,4 +50,14 @@ public class PaymentDetailDBManager {
             return null;
         }
     }
+    
+    public boolean idExist(String id) throws SQLException {
+        ResultSet rs = st.executeQuery("SELECT CUSTOMERID FROM DEVICES");
+        while (rs.next()) {
+            if (id == rs.getString(1)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

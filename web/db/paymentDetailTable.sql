@@ -7,6 +7,9 @@
  * Author:  lantianxiang
  * Created: 04/06/2020
  */
+
+DROP TABLE paymentDetail;
+
 Create Table paymentDetail(
 customerId varchar(30),
 bankCard varchar(30),
@@ -17,6 +20,7 @@ PRIMARY KEY (customerId)
 
 INSERT INTO paymentDetail (customerId,bankCard,cvv,expiryDate)
 VALUES
+('xu@uts.edu.au','1234567812345678','111','19/3/20'),
 ('apple@uts.edu.au','1234567812345678','111','19/3/20'),
 ('hexo@uts.edu.au','1234424812345678','222','19/4/21'),
 ('opps@uts.edu.au','1234567811545678','333','19/3/20'),
@@ -36,6 +40,6 @@ VALUES
 ('ihuihn@uts.edu.au','1234368123456678','246','14/3/20'),
 ('ruygvb@uts.edu.au','1634781234567648','745','19/3/20'),
 ('wevvw@uts.edu.au','1274576781265678','834','23/11/21'),
-('world@uts.edu.au','1234435421664678','425','29/3/20')
+('world@uts.edu.au','1234435421664678','425','29/3/20');
 
 

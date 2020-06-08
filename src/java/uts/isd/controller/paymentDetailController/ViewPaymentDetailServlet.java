@@ -34,17 +34,17 @@ public class ViewPaymentDetailServlet extends HttpServlet {
         String bankCard = request.getParameter("bankCard");
         String cvv = request.getParameter("cvv");
         String expiryDate = request.getParameter("expiryDate");
-        String permission = request.getParameter("permission");
+        //String permission = request.getParameter("permission");
 
-        PaymentDetailDBManager paymentDetailDBmanager = (PaymentDetailDBManager) session.getAttribute(" paymentDetailDBmanager");
+        PaymentDetailDBManager paymentDetailDBmanager = (PaymentDetailDBManager) session.getAttribute("paymentDetailDBmanager");
 
         try {
-             paymentDetailDBmanager.addPaymentDetail(customerId, bankCard, cvv, expiryDate);
+             paymentDetailDBmanager.updatePaymentDetail(bankCard, expiryDate, cvv, customerId);
             request.getRequestDispatcher("paymentDetail.jsp").include(request, response);
         }
             catch (SQLException ex) {
                 Logger.getLogger(CreatePaymentDetailServlet.class.getName()).log(Level.SEVERE, null, ex);
-    }
+         }
     }
 
 }
