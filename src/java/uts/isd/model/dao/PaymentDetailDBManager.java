@@ -20,7 +20,7 @@ public class PaymentDetailDBManager {
     }
 
     public void deletePaymentDetail(String customerId) throws SQLException {
-        st.executeUpdate("DELETE FROM IOTUSER.PAYMENTDETAIL WHERE BANKCARD='" + customerId + "'");
+        st.executeUpdate("DELETE FROM IOTUSER.PAYMENTDETAIL WHERE CUSTOMERID='" + customerId + "'");
     }
 
     public void updatePaymentDetail(String bankCard, String expiryDate, String cvv, String customerId) throws SQLException {
