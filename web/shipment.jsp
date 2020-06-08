@@ -21,7 +21,7 @@
                 <tr><td>suburb:</td><td><input type="text" name="suburb" required></td></tr>
                 <tr><td>state</td><td><input type="text" name="state" required></td></tr>
                 <tr><td>postcode</td><td><input type="number" name="postcode" required></td></tr>
-                <tr><td></td><td><input class="button" type="submit" value="Update"></td></tr>
+                <tr><td></td><td><input class="button" type="submit" value="Submit"></td></tr>
             </table>
         </form>
 
