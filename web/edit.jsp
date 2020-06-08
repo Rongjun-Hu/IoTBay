@@ -25,7 +25,7 @@
             <a class="button" href="main.jsp">Main</a>
             <a class="button" href="logout.jsp">Logout</a>
         </div>
-        <form class="form" action="edit.jsp" method="post">
+        <form class="form" action="UpdateServlet" method="post">
             <table>
 
                 <tr><td>Email:</td><td><input type="text"  name="email" value="${user.email}"></td></tr>
@@ -43,7 +43,7 @@
                 </tr>
                 <tr><td>Date of Birth:</td><td><input type="date" name="dob" value="${user.dob}"></td></tr>
                 <tr><td>Favourite Color:</td><td>
-                        <select name="color" id="favcolor">
+                        <select name="favcol" id="favcolor">
                             <option value="">--Please choose an option--</option>
                             <option value="Red">Red</option>
                             <option value="Blue">Blue</option>
@@ -52,7 +52,7 @@
                             <option value="Orange">Orange</option>
                             <option value="Pink">Pink</option>
                         </select>
-                    </td>         
+                    </td>
                 </tr>
                 <tr><td></td>
                     <td>
@@ -63,11 +63,7 @@
             </table>
         </form>
                 
-        <%
-            if (update != null) {
-                User.updateUser(session, request, user);
-            }
-        %>
+
 
 
 

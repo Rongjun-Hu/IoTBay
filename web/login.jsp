@@ -34,7 +34,7 @@
                     <td><input type="password" placeholder="<%=(passErr != null ? passErr : "Enter password")%>" name="password"></td>
                 </tr> 
                 <tr>
-                    <td>I want to sign in as:</td>
+                    <td>LogIn as:</td>
                     <td><input type="radio" id="anony" name="permission" value="anony">
                         <lable for="anony">Anonymous</lable>
                     </td>
