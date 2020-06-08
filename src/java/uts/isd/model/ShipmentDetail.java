@@ -10,34 +10,24 @@ package uts.isd.model;
  * @author wangyifan
  */
 public class ShipmentDetail {
-    private String addressLine1;
-    private String addressLine2;
+    private String addressLine;
     private String suburb;
     private String postcode;
     private String state;
 
-    public ShipmentDetail(String addressLine1, String addressLine2, String suburb, String postcode, String state) {
-        this.addressLine1 = addressLine1;
-        this.addressLine2 = addressLine2;
+    public ShipmentDetail(String addressLine, String suburb, String postcode, String state) {
+        this.addressLine = addressLine;
         this.suburb = suburb;
         this.postcode = postcode;
         this.state = state;
     }
 
-    public String getAddressLine1() {
-        return addressLine1;
+    public String getAddressLine() {
+        return addressLine;
     }
 
-    public void setAddressLine1(String addressLine1) {
-        this.addressLine1 = addressLine1;
-    }
-
-    public String getAddressLine2() {
-        return addressLine2;
-    }
-
-    public void setAddressLine2(String addressLine2) {
-        this.addressLine2 = addressLine2;
+    public void setAddressLine(String addressLine1) {
+        this.addressLine = addressLine;
     }
 
     public String getSuburb() {
