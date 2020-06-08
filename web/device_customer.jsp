@@ -37,8 +37,7 @@
                     <td><%=device.getPrice()%></td>
                     <td><%=device.getType()%></td>
                     <td><%=device.getStock()%></td>
-                    <td> Order </td>
-<!--                    the order feature may start here-->
+                    <td><a href="order.jsp?id=<%=device.getId()%>">Order</a></td>
                 </tr>
                 <% } %>
             </tbody>
