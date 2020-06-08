@@ -109,7 +109,7 @@ public class OrderDBManager {
 
     public void deleteOrder(int orderId) throws SQLException {
         int status = 4;
-        st.executeUpdate("UPDATE FROM IOTUSER.ORDERS SET STATUS=" + status + " WHERE ORDERID =" + orderId);
+        st.executeUpdate("UPDATE IOTUSER.ORDERS SET STATUS=" + status + " WHERE ORDERID =" + orderId);
     }
     
     public boolean orderIdExist(int orderId) throws SQLException {
