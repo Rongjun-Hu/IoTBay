@@ -20,6 +20,8 @@ public class ConnServlet extends HttpServlet {
     private UserDBManager manager;
     private DeviceDBManager manager2;
     private OrderDBManager manager3;
+    private PaymentDetailDBManager manager4;
+    private ShipmentDBManager manager5;
 
     private Connection conn;
 
@@ -43,6 +45,8 @@ public class ConnServlet extends HttpServlet {
             manager = new UserDBManager(conn);  //Create DB managers
             manager2 = new DeviceDBManager(conn);
             manager3 = new OrderDBManager(conn);
+            manager4 = new PaymentDetailDBManager(conn);
+            manager5 = new ShipmentDBManager(conn);
         } catch (SQLException ex) {
             Logger.getLogger(ConnServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
