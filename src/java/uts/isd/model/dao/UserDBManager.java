@@ -47,9 +47,9 @@ public class UserDBManager {
     }
 
     //update a user details in the database   
-    public void updateUser(String email, String name, String password, String dob) throws SQLException {
+    public void updateUser(String email, String name, String password, String gender, String favcol, String dob) throws SQLException {
         //code for update-operation   
-        st.executeUpdate("UPDATE IOTUSER.USERS SET NAME = '" + name + "',PASSWORD = '" + password + "',DOB = '" + dob + "' WHERE EMAIL = '" + email + "'");
+        st.executeUpdate("UPDATE IOTUSER.USERS SET NAME = '" + name + "',PASSWORD = '" + password + "',GENDER = '" + gender + "',Favcol = '" + favcol + "',DOB = '" + dob + "' WHERE EMAIL = '" + email + "'");
 
     }
 
@@ -91,5 +91,9 @@ public class UserDBManager {
             }
         }
         return false;
+    }
+
+    public User findUser(String email, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
