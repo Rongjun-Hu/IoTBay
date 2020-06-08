@@ -22,7 +22,7 @@
                 <tr><td>state</td><td><input type="text" name="state" required></td></tr>
                 <tr><td>postcode</td><td><input type="number" name="postcode" required></td></tr>
                 <tr><td></td><td><input class="button" type="submit" value="Submit"></td></tr>
-
+            <a class="button" href="main.jsp">Cancel</a>
             <a class="button" href="LogoutServlet">Logout</a>
             </table>
         </form>
