@@ -28,6 +28,7 @@
             <!--<a class="button" href="edit.jsp"> Account</a>-->
             <a class = "button" href='paymentDetailSetting.jsp'> Payment Setting</a>
             <a class="button" href="LogoutServlet">Logout</a>
+            <a class="button" href="shipment.jsp">Shipment</a>
         </div>
 
         <p style="text-align: right; color: yellow; "> 
