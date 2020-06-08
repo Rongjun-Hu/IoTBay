@@ -51,6 +51,11 @@ public class CreateOrderServlet extends HttpServlet {
                 session.setAttribute("order", order);
                 request.getRequestDispatcher("view_order.jsp").include(request, response);
             }
+            if (status == 4) {
+                session.setAttribute("device", device);
+                session.setAttribute("order", order);
+                request.getRequestDispatcher("main.jsp").include(request, response);
+            }
         } catch (SQLException ex) {
             Logger.getLogger(ReadOrderServlet.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
