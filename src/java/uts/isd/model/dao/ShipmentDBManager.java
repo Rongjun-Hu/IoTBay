@@ -21,8 +21,8 @@ public class ShipmentDBManager {
         st = conn.createStatement();
     }
 
-    public void addShipmentDetail(String addressLine1, String addressLine2, String suburb, String state, int postcode) throws SQLException {                    
-        st.executeUpdate("INSERT INTO IOTUSER.ShipmentDetail(addressLine1, addressLine2, suburb, state, postcode) VALUES('" + addressLine1 + "'," + addressLine2 + ",'" + suburb + "'," + state  + "'," + postcode + ")");
+    public void addShipmentDetail(String addressLine, String suburb, String state, int postcode) throws SQLException {                    
+        st.executeUpdate("INSERT INTO IOTUSER.ShipmentDetail(addressLine2, suburb, state, postcode) VALUES('" + addressLine1 + "'," + addressLine2 + ",'" + suburb + "'," + state  + "'," + postcode + ")");
     }
     
     

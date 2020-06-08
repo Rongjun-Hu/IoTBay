@@ -31,17 +31,17 @@ public class User {
         this.permission = permission;
     }
     
-    public static void updateUser(HttpSession session, HttpServletRequest request, User user) {
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        String gender = request.getParameter("gender");
-        String dob = request.getParameter("dob");
-        String favcol = request.getParameter("favcol");
-        String permission = request.getParameter("permission");
-        user = new User(email, name ,password, gender, favcol, dob, permission);
-        session.setAttribute("user", user);
-    }
+//    public static void updateUser(HttpSession session, HttpServletRequest request, User user) {
+//        String name = request.getParameter("name");
+//        String email = request.getParameter("email");
+//        String password = request.getParameter("password");
+//        String gender = request.getParameter("gender");
+//        String dob = request.getParameter("dob");
+//        String favcol = request.getParameter("favcol");
+//        String permission = request.getParameter("permission");
+//        user = new User(email, name ,password, gender, favcol, dob, permission);
+//        session.setAttribute("user", user);
+//    }
     
     //insert getter and setter
 
