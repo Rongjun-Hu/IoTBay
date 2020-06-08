@@ -50,6 +50,8 @@ public class ViewAnOrderServlet extends HttpServlet {
             session.setAttribute("device", device);
             session.setAttribute("order", order);  
             request.getRequestDispatcher("view_order.jsp").include(request, response);} 
+              if (status == 4){
+            request.getRequestDispatcher("main.jsp").include(request, response);} 
         } catch (SQLException ex) {
             Logger.getLogger(ReadOrderServlet.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
