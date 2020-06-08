@@ -31,7 +31,7 @@
                 <tr><td>Search Save Order</td></tr>
                 <tr><td>Email:</td><input type="text" value="<%=email%>" name="email" readonly="true"></td></tr>
                 <tr><td>Order ID:</td><td><input type="text" placeholder="Search by Order ID" name="orderId"></td></tr>
-                <tr><td>Order Date:</td><td><input type="Date" placeholder="Search by Order Date" name="orderDate"></td></tr>
+                <tr><td>Order Date:</td><td><input type="date" placeholder="Search by Order Date" name="orderDate"></td></tr>
                  <td><input type="radio" id="save" name="status" value="0" checked>
                         <lable for="save">Saved Orders</lable>
                     </td>
