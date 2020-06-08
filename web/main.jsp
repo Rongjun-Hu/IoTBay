@@ -39,7 +39,7 @@
             
             <form action="ReadDeviceServlet" method="post">
             <table>
-                <tr><td>Search Condition</td></tr>
+                <tr><td>Search Condition (Not Composory)</td></tr>
                 <tr><td>Device Name:</td><td><input type="text" placeholder="Search by Name" name="name"></td></tr>
                 <tr><td>Device Type:</td><td><input type="text" placeholder="Search by Type" name="type"></td></tr>
                 <tr><input class="button" type="submit" value="Refresh and View"></tr>
