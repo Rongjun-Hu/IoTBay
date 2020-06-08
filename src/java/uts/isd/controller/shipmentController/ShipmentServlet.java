@@ -33,8 +33,7 @@ public class ShipmentServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         Validator validator = new Validator();
-        String addressLine1 = request.getParameter("addressLine1");
-        String addressLine2 = request.getParameter("addressLine2");
+        String addressLine = request.getParameter("addressLine");;
         String suburb = request.getParameter("suburb");
         String state = request.getParameter("state");
         String postcode = request.getParameter("postcode");

@@ -22,7 +22,7 @@ public class ShipmentDBManager {
     }
 
     public void addShipmentDetail(String addressLine, String suburb, String state, int postcode) throws SQLException {                    
-        st.executeUpdate("INSERT INTO IOTUSER.ShipmentDetail(addressLine2, suburb, state, postcode) VALUES('" + addressLine1 + "'," + addressLine2 + ",'" + suburb + "'," + state  + "'," + postcode + ")");
+        st.executeUpdate("INSERT INTO IOTUSER.ShipmentDetail(addressLine, suburb, state, postcode) VALUES('" + addressLine + ",'" + suburb + "'," + state  + "'," + postcode + ")");
     }
     
     
